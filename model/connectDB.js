@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 
-//如果没有blog数据库，mongo豆db会自动创建
+//如果没有blog数据库，mongodb会自动创建
+mongoose.set('useCreateIndex', true);
 mongoose.connect('mongodb://localhost/blog', {
     useNewUrlParser: true,
     useUnifiedTopology: true
